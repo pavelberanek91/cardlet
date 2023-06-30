@@ -4,27 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardlet|{% block subname %}{% endblock %}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}"> -->
 </head>
-<body>
+<body style="margin: 30px">
     <header>
-        <h1 id="cardletheading">Cardlet</h1>
+        <h1  class="ui center aligned icon header" style="color: #540877;">
+            Cardlet
+
+            <div class="three ui buttons">
+                <button  class="ui button" onclick="window.location.href='cardlet';">Cardlet</button>
+                <button class="ui button" onclick="window.location.href='cards';">Karty</button>
+                <button class="ui button" onclick="window.location.href='contact';">Kontakt</button>
+            </div>
+        </h1>
+
+        
     </header>
-    <nav>
-        <ul>
-            <li><a href="cardlet">Cardlet</a></li>
-            <li><a href="cards">Karty</a></li>
-            <li><a href="contact">Kontakt</a></li>
-        </ul>
-    </nav>
+     
     <main>
         {% block main %}{% endblock %}
     </main>
-    <footer>
+    <footer style="margin-top: 30px">
         <p>Zde budou odkazy na socials, github atd.</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
+    
+   
+
+    
+  
+   
 </body>
 </html>

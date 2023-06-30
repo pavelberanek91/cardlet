@@ -8,6 +8,8 @@ cardset = []
 
 @app.route("/")
 @app.route("/cardlet", methods=["GET"])
+
+
 def cardlet():
     return render_template("cardlet.html")
 
